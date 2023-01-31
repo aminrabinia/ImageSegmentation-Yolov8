@@ -27,7 +27,7 @@ def root():
 
 def gradio_infer(myimg, conf=0.50):
     if myimg is not None:
-    	results = model.predict(myimg, conf=conf, show=True)
+    	results = model.predict(myimg, device='cpu', conf=conf, show=True)
     	return results
 
 

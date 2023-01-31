@@ -237,7 +237,7 @@ class BasePredictor:
         device = select_device(self.args.device)
         model = model or self.args.model
         self.args.half &= device.type != 'cpu'  # half precision only supported on CUDA
-        self.model = AutoBackend(model, device=device, dnn=self.args.dnn, fp16=self.args.half)
+        self.model = AutoBackend(model, device=device, dnn=self.args.dnn, fp16=self.args.half, fuse=False)
         self.device = device
         self.model.eval()
 
