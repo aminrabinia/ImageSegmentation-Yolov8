@@ -27,7 +27,9 @@ COPY . /usr/src/ultralytics
 # Install pip packages
 COPY requirements.txt .
 RUN python3 -m pip install --upgrade pip wheel
-RUN pip install --no-cache -r requirements.txt ultralytics albumentations gsutil notebook \
+RUN pip install --no-cache -r \ 
+	requirements.txt \
+	ultralytics albumentations gsutil notebook \
     coremltools onnx onnx-simplifier onnxruntime tensorflow-cpu \
     # openvino-dev tensorflowjs \
     --extra-index-url https://download.pytorch.org/whl/cpu
