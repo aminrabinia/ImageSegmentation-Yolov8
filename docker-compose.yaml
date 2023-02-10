@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-  segmentationyolov8:
+  segyolo8:
     build: .
     ports:
       - 8080:8080
