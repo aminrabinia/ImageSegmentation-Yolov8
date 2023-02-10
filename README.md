@@ -1,4 +1,4 @@
-## <div align="center">Updates in Latest Commit"</div>
+## <div align="center">Updates in Latest Commit</div>
 
 Docker file changed to install ultralytics in runtime. 
 
