@@ -1,4 +1,22 @@
+## <div align="center">Updates in Latest Commit"</div>
 
+Docker file changed to install ultralytics in runtime. 
+
+Fuse bug fixed (calling async function). 
+
+`model.predictor.annotator.result()` will return the annotated image without needing to change model class. 
+
+```
+async def infer(myimg, conf=0.50):
+    if myimg is None:
+        return
+    results = model.predict(myimg, device='cpu', conf=conf, save=True) 
+    print(results)
+    if len(results[0].numpy())==0:
+        return myimg
+    else:
+        return model.predictor.annotator.result()
+```
 
 ## <div align="center">Code Updated</div>
 
