@@ -4,7 +4,7 @@ Docker file changed to install ultralytics in runtime.
 
 Fuse bug fixed (calling async function). 
 
-`model.predictor.annotator.result()` will return the annotated image without needing to change model class. 
+`model.predictor.annotator.result()` will return the annotated image without needing to change `predictor.py`. 
 
 ```
 async def infer(myimg, conf=0.50):
